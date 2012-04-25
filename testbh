@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/nemo-nas/openmpi/openmpi-psm/bin/mpirun -hostfile /nemo-nas/share/hosts-nemo.eth -np 80 -x PETSC_DIR -x PETSC_ARCH -x LIBMESH_DIR -x LD_LIBRARY_PATH -x PATH ./bioheat-opt $*

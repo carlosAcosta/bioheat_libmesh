@@ -1,0 +1,29 @@
+
+# Densities of the liquid and solid
+rho_L = 1060  # kg/m^3
+rho_S = 1080  # kg/m^3
+
+# Specific heat capacities of the liquid and solid
+c_L = 3770  # J/kg-K
+c_S = 3600  # J/kg-K
+
+# Heat conductivities of the liquid and solid
+k_L = 0.492  # W/m-K
+k_S = 0.469  # W/m-K
+
+# External heating supplied to liquid and solid
+# TODO: support non-constant functions here
+r_L = 0
+r_S = 0
+
+# Characteristic particle diameter of the solid
+D_c = 0.0001  # m
+
+# Dynamic viscosity of the liquid
+mu = 4e-3  # Pa-s
+
+# Evaluate temperature too?
+evaluate_T = true
+
+# Don't pin the pressure; it's set implicitly at the outlet
+pressure_penalty = 0

@@ -1,0 +1,225 @@
+Started ./bioheat-opt
+Building mesh
+Building system
+Added Dirichlet boundary 0 for variables 0124
+Added Dirichlet boundary 1 for variables 0124
+Added Dirichlet boundary 2 for variables 4
+Initializing systems
+Setting initial conditions
+ Mesh Information:
+  mesh_dimension()=3
+  spatial_dimension()=3
+  n_nodes()=16513
+    n_local_nodes()=349
+  n_elem()=1920
+    n_local_elem()=24
+    n_active_elem()=1920
+  n_subdomains()=1
+  n_partitions()=80
+  n_processors()=80
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "BioheatSystem"
+    Type "Implicit"
+    Variables="u" "v" "w" "p" "T" 
+    Finite Element Types="LAGRANGE" "LAGRANGE" "LAGRANGE" "LAGRANGE" "LAGRANGE" 
+    Approximation Orders="SECOND" "SECOND" "SECOND" "FIRST" "SECOND" 
+    n_dofs()=68277
+    n_local_dofs()=1466
+    n_constrained_dofs()=7821
+    n_local_constrained_dofs()=252
+    n_vectors()=2
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 192.495
+      Average Off-Processor Bandwidth <= 98.1685
+      Maximum  On-Processor Bandwidth <= 527
+      Maximum Off-Processor Bandwidth <= 411
+    DofMap Constraints
+      Number of DoF Constraints = 7797
+      Number of Heterogenous Constraints= 305
+      Average DoF Constraint Length= 0
+
+ Solving time step 0, time = 0
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 8.15204e-08
+Assembling the Jacobian
+Assembling the residual
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 6.68072e-08
+Assembling the Jacobian
+Assembling the residual
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 6.00844e-08
+Assembling the Jacobian
+Assembling the residual
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 5.40442e-08
+Assembling the Jacobian
+Assembling the residual
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.8621e-08
+Assembling the Jacobian
+Assembling the residual
+Assembling the residual
+  PetscDiffSolver step 5, |residual|_2 = 3.69428e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 6, |residual|_2 = 3.46626e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 7, |residual|_2 = 7.45373e-09
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 8, |residual|_2 = 8.05401e-11
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 9, |residual|_2 = 9.49898e-17
+ Postprocessing time step 0, time = 0.1
+ Solving time step 1, time = 0.1
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 5.18139e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 4.29576e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 1.21846e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.86287e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.0871e-19
+ Postprocessing time step 1, time = 0.2
+ Solving time step 2, time = 0.2
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 8.63911e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 3.42917e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 3.00254e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.74658e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.14413e-19
+ Postprocessing time step 2, time = 0.3
+ Solving time step 3, time = 0.3
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 5.1827e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 4.27995e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 1.22335e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.84182e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.31024e-19
+ Postprocessing time step 3, time = 0.4
+ Solving time step 4, time = 0.4
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 8.62419e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 3.49051e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 3.02966e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.72959e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.07491e-19
+ Postprocessing time step 4, time = 0.5
+ Solving time step 5, time = 0.5
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 5.18408e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 4.26462e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 1.22875e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.82155e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.23598e-19
+ Postprocessing time step 5, time = 0.6
+ Solving time step 6, time = 0.6
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 8.60929e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 3.55723e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 3.05982e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.71557e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.13391e-19
+ Postprocessing time step 6, time = 0.7
+ Solving time step 7, time = 0.7
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 5.18553e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 4.24981e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 1.2347e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.80212e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.23917e-19
+ Postprocessing time step 7, time = 0.8
+ Solving time step 8, time = 0.8
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 8.59443e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 3.62992e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 3.09335e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.70477e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.20243e-19
+ Postprocessing time step 8, time = 0.9
+ Solving time step 9, time = 0.9
+Assembling the residual
+  PetscDiffSolver step 0, |residual|_2 = 5.18704e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 1, |residual|_2 = 4.23555e-07
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 2, |residual|_2 = 1.24121e-08
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 3, |residual|_2 = 3.78358e-12
+Assembling the Jacobian
+Assembling the residual
+  PetscDiffSolver step 4, |residual|_2 = 4.18529e-19
+ Postprocessing time step 9, time = 1

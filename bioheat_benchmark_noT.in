@@ -1,0 +1,26 @@
+
+# Densities of the liquid and solid
+rho_L = 1
+rho_S = 1
+
+# Specific heat capacities of the liquid and solid
+c_L = 1
+c_S = 1
+
+# Heat conductivities of the liquid and solid
+k_L = 1
+k_S = 1
+
+# External heating supplied to liquid and solid
+# TODO: support non-constant functions here
+r_L = 0
+r_S = 0
+
+# Characteristic particle diameter of the solid
+D_c = 0.0001  # m
+
+# Dynamic viscosity of the liquid
+mu = 1
+
+# Evaluate temperature too?
+evaluate_T = false

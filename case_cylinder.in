@@ -1,0 +1,185 @@
+
+# ADAPTIVITY
+
+# The maximum number of adaptive steps per timestep
+max_adaptivesteps = 0
+
+# The global FEM error tolerance at each timestep
+# Make this nonzero to solve to a specified tolerance
+# This will probably break with KellyErrorIndicator
+# const Real global_tolerance = 1.e-3;
+global_tolerance = 0.0
+
+# The desired number of active mesh elements
+# Make this nonzero to solve to a specified mesh size
+nelem_target = 32798
+#nelem_target = 250000
+
+# Coarsen threshold factor for refinement trading
+coarsen_threshold = 5
+
+# Write out error vectors to files
+write_gmv_error = true
+write_tecplot_error = false
+
+
+# TIME INTEGRATION
+
+# Solve a transient instead of a steady problem?
+transient = true
+
+# The interval between our timesteps
+deltat = 0.1
+
+# And the number of timesteps to take
+n_timesteps = 10
+
+# Write out every nth timestep to file.
+write_interval = 1
+
+
+# DOMAIN
+
+# Solve a 2D or 3D problem?
+dimension = 3
+#dimension = 2
+
+# On what type of mesh? 
+domaintype = 'cylinder'
+#domaintype = 'square'
+#domaintype = 'sphere'
+#domaintype = 'file'
+
+# Of what size?
+domain_edge_width = 0.01  # 5mm radius
+domain_edge_length = 0.01
+domain_edge_height = 0.06
+
+# The coarse grid size from which to start adaptivity
+# (except that coarsegridx gets interpreted as number of
+# prerefinements in the sphere/circle/cylinder cases)
+coarsegridx = 2
+coarsegridy = 0
+coarsegridz = 24
+
+# The number of uniform refinements to immediately perform on that grid
+coarserefinements = 0
+
+# The number of extra uniform refinements to perform after setting ICs
+extrarefinements = 0
+
+
+# ALGEBRAIC SOLVER
+
+# Use PETSc for nonlinear solves, not just linear solves?
+# use_petsc_snes = true
+
+# Options for non-NewtonSolver
+
+# Should the nonlinear solver produce verbose messages?
+solver_quiet   = false
+solver_verbose = true
+
+# How many iterations before the nonlinear solver gives up?
+max_nonlinear_iterations = 5
+
+# How much step size reduction should indicate convergence?
+relative_step_tolerance = 1.e-6
+
+# How much residual reduction should indicate convergence?
+# relative_residual_tolerance = 1.e-9
+relative_residual_tolerance = 0
+
+# How many iterations before the linear solver gives up?
+max_linear_iterations = 100000
+
+# What should the largest relative linear tolerance be?
+initial_linear_tolerance = 1.e-3
+
+# How should it relate to the nonlinear residual in future steps?
+linear_tolerance_multiplier = 1.e-3
+
+
+# FINITE ELEMENT FORMULATION
+
+# Use what finite element space?
+#fe_family = HERMITE
+#fe_order = 3
+fe_family = LAGRANGE
+fe_order = 1
+
+
+# DEBUGGING
+
+# Verify analytic jacobians against numerical ones?
+#verify_analytic_jacobians = 1.e-9
+verify_analytic_jacobians = 0
+
+# Detailed debugging options
+print_solution_norms = false
+print_solutions = false
+print_residual_norms = false
+print_residuals = false
+print_jacobian_norms = false
+print_jacobians = false
+
+
+# POSTPROCESSING
+
+# Output format(s)
+output_gmv = true
+output_tecplot = false
+
+
+# PHYSICS
+
+# Function to use for liquid fraction n_L:
+
+# Just one function, ID 0
+other_interior_function_ids = 0
+# Defined on the default subdomain
+other_interior_function_subdomains = 0
+# Parsed from the input file
+other_interior_function_types = 'parsed'
+# With a little spatial variation for interest?
+#other_interior_function_values = '0.5+0.1*cos(x)'
+other_interior_function_values = 'if((z>0.02)&(z<0.04),0.8,1)'
+
+# Config file for other data
+system_config_file = 'bioheat_cylinder.in'
+
+
+# INITIAL & BOUNDARY CONDITIONS
+
+# Initially quiescent initial conditions, temperature rescaled to 0
+initial_condition_subdomains = 0
+initial_condition_types = zero
+initial_condition_values = 0
+
+# Dirichlet conditions for a cylinder: no-slip sides, 
+# Fixed 1 cm/s inlet velocity.
+# Fixed 0 C temperature everywhere.
+# Homogeneous Neumann outlet
+dirichlet_condition_boundaries = '0 1 2'
+dirichlet_condition_types = 'zero parsed zero'
+dirichlet_condition_values = '0 {0}{0}{0.01}{0}{0} 0'
+dirichlet_condition_variables = '11101 11101 00001' # uvwpT
+
+# Dirichlet conditions for a 2D lid-driven cavity, lid at ymax moving
+# in x direction at constant velocity 1
+#dirichlet_condition_boundaries = '0 1 2 3'
+#dirichlet_condition_types = 'zero zero parsed zero'
+#dirichlet_condition_values = '0 0 {1}{0}{0}{0} 0'
+#dirichlet_condition_variables = '1100 1100 1100 1100' # uvpT
+
+# Dirichlet conditions with temperature absent
+#dirichlet_condition_types = 'zero zero parsed zero'
+#dirichlet_condition_values = '0 0 {1}{0}{0} 0'
+#dirichlet_condition_variables = '110 110 110 110' # uvp
+
+# Dirichlet conditions for a 3D lid-driven cavity, lid at zmax moving
+# in x direction
+# dirichlet_condition_boundaries = 0 1 2 3 4 5
+# dirichlet_condition_types = 'zero zero zero zero zero parsed'
+# dirichlet_condition_values = '0 0 0 0 0 {1}{0}{0}{0}{0}'
+# dirichlet_condition_variables = '11100 11100 11100 11100 11100 11100' # uvwpT
